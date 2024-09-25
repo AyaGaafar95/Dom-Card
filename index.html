@@ -14,11 +14,30 @@
 .card.show {
   opacity: 1; /* Fully visible */
   transform: translateY(0); /* Return to normal position */
+  box-shadow: 0 0 15px 5px rgba(255, 255, 0, 0.8);
+}
+
+@keyframes glowing {
+  0% {
+    box-shadow: 0 0 5px rgba(34, 0, 255, 0.5), 0 0 10px rgba(51, 0, 255, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 10px rgba(255, 255, 0, 0.8), 0 0 20px rgba(255, 255, 0, 1);
+  }
+  100% {
+    box-shadow: 0 0 5px rgba(255, 255, 0, 0.5), 0 0 10px rgba(255, 255, 0, 0.7);
+  }
+}
+
+
+.card.show {
+  animation: glowing 1.5s infinite alternate; 
 }
 
     </style>
 </head>
 <body>
+    <img class="Cute-face" src="/images/Capture.PNG" />
     <script src="main.js"></script>
 </body>
 </html>
