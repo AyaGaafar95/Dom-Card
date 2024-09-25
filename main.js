@@ -53,13 +53,25 @@ card.appendChild(title)
 card.appendChild(age)
 card.appendChild(image)
 container.appendChild(card)
+
+return card
 }
 
+function revealCards(cards){
+    cards.forEach((card,index)=>{
+        setTimeout(()=>{
+            card.classList.add('show');// Add 'show' class after delay
+        },index * 500) ; // Delay of 500ms between each card
+    })
+}
 
-
+let cards =[];
 // TODO: If the names array has more items than the colors ==> % colors.length
 for(i = 0 ; i< names.length ; i++){
     let color = colors[i % colors.length];
     let images = avatars[i]
     createCards(names[i], color,images);
+    cards.push(card)
 }
+
+revealCards(cards)
