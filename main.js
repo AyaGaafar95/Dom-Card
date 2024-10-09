@@ -59,6 +59,9 @@ function createCards(name, color, imageSrc) {
     title.appendChild(head);
     age.appendChild(ageContent);
 
+card.addEventListener('click',function(){
+        document.body.style.backgroundColor = color
+})
 
     return card;
 }
