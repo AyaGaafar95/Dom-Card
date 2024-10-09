@@ -3,7 +3,7 @@ let colors = ['#f6bd60', '#caf0f8', '#f5cac3', '#ecf39e', '#f4cae0', '#ffa5ab'];
 let avatars = ['images/Avatars-Bakar.png', 'images/Avatars.png', 'images/Avatars (5).png', 
                'images/Avatars (1).png', 'images/Avatars (3).png', 'images/Avatars (1).png', 
                'images/Avatars (3).png', 'images/Avatars.png'];
-
+let faceImage = document.getElementById('Cute-face')
 let container = document.createElement('div');
 document.body.appendChild(container);
 container.style.textAlign = 'center';
@@ -61,6 +61,8 @@ function createCards(name, color, imageSrc) {
 
 card.addEventListener('click',function(){
         document.body.style.backgroundColor = color
+        faceImage.style.backgroundColor = color
+
 })
 
     return card;
